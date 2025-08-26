@@ -51,9 +51,16 @@ html, body {
   background-color: var(--col-stone-100);
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 html, body, main {
     flex: 1;
-    /* height: 100vh; comentar esta line */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,6 +105,10 @@ hr {
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+button {
+  outline: none;
 }
 
 /* Header */
@@ -230,4 +241,104 @@ footer.attribution a {
 
 @keyframes fade-out {
     100% { opacity: 0; }
+}
+
+/* Dialog */
+dialog#ingredients-dialog {
+  width: min(85vw, 460px);
+  color: var(--col-stone-600);
+  border-radius: var(--bor-rad);
+  padding: clamp(2rem, 3vw, 3.25rem);
+  border: 1px solid var(--col-brown-800);
+  background-color: var(--col-stone-100);
+}
+
+dialog#ingredients-dialog > button.close {
+  opacity: .5;
+  top: .5rem;
+  right: .5rem;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-weight: 500;
+  position: absolute;
+  font-family: system-ui;
+  background-color: transparent;
+}
+
+dialog#ingredients-dialog > header {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+dialog#ingredients-dialog > article.content > h4 {
+  font-family: "Young Serif";
+  color: var(--col-brown-800);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+dialog#ingredients-dialog > article.content > a {
+  text-decoration: none;
+  color: var(--col-stone-600);
+}
+
+dialog#ingredients-dialog > article.content > a > section.card {
+  gap: 1rem;
+  padding: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  transform: none;
+  transition: .2s transform;
+  border-radius: var(--bor-rad);
+  background-color: var(--col-white);
+  border: 1px solid var(--col-brown-800);
+}
+
+dialog#ingredients-dialog > article.content > a:hover > section.card {
+  transform: scale(1.05);
+}
+
+dialog#ingredients-dialog > article.content > a > section.card > img {
+  max-width: 80px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+dialog#ingredients-dialog > article.content > iframe {
+  height: 240px;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: var(--bor-rad);
+}
+
+button#ingredients-btn {
+  top: -1rem;
+  right: -1rem;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+  padding: .4rem;
+  cursor: pointer;
+  opacity: .9;
+}
+
+button#ingredients-btn:hover {
+  opacity: 1;
+}
+
+button#ingredients-btn > img.ai-icon,
+dialog#ingredients-dialog > header > img.ai-icon {
+  width: 30px;
+  height: 30px;
 }

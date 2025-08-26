@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Recipe</title>
   <link rel="stylesheet" href="./styles/index.css">
 </head>
-<body>
+<body class="overflow-auto">
   <!-- Header -->
   <header class="top animate-fade-out">
     <h1 id="headline">Recipe</h1>
@@ -41,6 +41,43 @@
           <li>1 tablespoon of butter or oil</li>
           <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
+        <!-- Dialog -->
+        <dialog id="ingredients-dialog">
+          <button class="close">X</button>
+          <!-- Header -->
+          <header>
+            <img class="ai-icon" src="./assets/images/ai.webp" alt="IA - Open instructions dialog" title="IA - Open instructions dialog">
+            <small><em>IA - Experimental</em></small>
+          </header>
+          <!-- Content -->
+          <article class="content">
+            <h4>Get some products here</h4>
+            <a href="https://www.amazon.es/-/en/dp/B01LQAZ3CW?pd_rd_w=H7K2L&content-id=amzn1.sym.b14e5ec2-c16f-4550-90f3-d5c9e9e34209&pf_rd_p=b14e5ec2-c16f-4550-90f3-d5c9e9e34209&pf_rd_r=B64MT63Z4PC4Y3J1Y8ZE&pd_rd_wg=AKSSm&pd_rd_r=6938ebbb-5ee4-49df-a1e4-9c390d7be691&pd_rd_i=B01LQAZ3CW&fpw=alm&almBrandId=QW1hem9uIEZyZXNo&ref_=pd_alm_fs_dsk_cp_ai_rzg_1_1_i" target="_blank">
+            <section class="card">
+              <img src="https://m.media-amazon.com/images/I/813eyQc0sqL._AC_SX679_.jpg" alt="Eggs" title="Eggs">
+              <p>Fresh eggs from hens raised on the ground and with access...</p>
+            </section>
+            </a>
+            <a href="https://www.amazon.es/-/en/White-Brand-Gourmet-Iodized-Table/dp/B09Y5RCGTX/ref=sr_1_2_f3_wg?almBrandId=QW1hem9uIEZyZXNo&crid=32MQ18RKS9ZSY&dib=eyJ2IjoiMSJ9.gOOvMlCW2Dp8p8ENZfP_z756x5Knz5vv8MF7irBtyO8-NOs8ISG75Wvub5C7t646NbH2yrdzpdLL9h_XSZmTl2H2RBMQIIJXDtTOHsjgKsn4Wvn_lLpS64k-A5kHmguQzFcPwpHfQahIZkhS5Dx-7bM02S2Ix7MRycnpwUIVWSBcyah6hS-cgQ1weajyeULzYuKkJ0xY3kXRSgdZGe9iCMsD5VjuU1NuDw6TAWSriqSrODUqsMT0_MAPNu6hTaK1mF9bYrpcbTLBvOjjQoZOi68yuoJcxIwX9bzwXRrNlUg.CAP6TcUiyq0PeeBNM8yCM_neDgVOtt5u20w_6s-2cfU&dib_tag=se&fpw=alm&keywords=salt&qid=1756243850&s=amazonfresh&sprefix=salt%2Camazonfresh%2C168&sr=1-2" target="_blank">
+            <section class="card">
+              <img src="https://m.media-amazon.com/images/I/51lIdr5sqYL._AC_SX679_.jpg" alt="Salt" title="Salt">
+              <p>Gourmet fine table salt is iodized and comes packaged...</p>
+            </section>
+            </a>
+            <a href="https://www.amazon.es/-/en/Carmencita-Pepper-Grinder-Adjustable-Grinding/dp/B00YGK7DNM/ref=sr_1_4_f3_wg?almBrandId=QW1hem9uIEZyZXNo&crid=2NCNPMCTTMRK5&dib=eyJ2IjoiMSJ9.W1evM_dSw7FJ1eR6GBDRg8GfMfjwuMYBesOi9K8etB1_h0SzxYk4xjI0uAG-3xfHW9hsG-BXkCTzVHjn_C6rFF_w7UbELYXdUoFNBvdQ0-7jb71vLAERBczNhcgyOQlVqxsMg2sA04sVia2OE1mEgePmP8EhuXaID0kg64tFUmjVmLqIodQRFhDWCnG_9XQa0_pNoErZoPzKQeMs0JgDagU_pZeyVs8wtJevOTDoa7kRwdQG-bMuECto2HwF4MrPGUGGGDmwCdZYjZYrh073oQbQFLBg136Y6-e7j78nNfo.KhgrVKd10I9fVAlpcLOLUQe3RMcAHA17lr1x-0If8EI&dib_tag=se&fpw=alm&keywords=pepper&qid=1756243921&s=amazonfresh&sprefix=pepper%2Camazonfresh%2C126&sr=1-4" target="_blank">
+            <section class="card">
+              <img src="https://m.media-amazon.com/images/I/61+ZFu0fN9L._AC_SX679_.jpg" alt="Pepper" title="Pepper">
+              <p>Black Pepper Glass Grinder is the ideal ally for seasoning...</p>
+            </section>
+            </a>
+            <h4>Or watch it, if you need help</h4>
+            <iframe src="https://www.youtube.com/embed/fqqwFWqxUr4?si=g3gprasTua-L7zlj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </article>
+        </dialog>
+        <!-- Dialog Trigger -->
+        <button id="ingredients-btn" title="Open ingredients dialog" aria-label="Open ingredients dialog">
+          <img class="ai-icon" src="./assets/images/ai.webp" alt="IA - Open ingredients dialog" title="IA - Open ingredients dialog">
+        </button>
        </section>
        <hr>
        <!-- Instructions -->
@@ -89,4 +126,6 @@
     Challenge by <a href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/FedericoMp" target="_blank">@FedericoMp</a>.
   </footer>
+  <!-- Scripts -->
+  <script type="module" src="./scripts/index.js"></script>
 </html>
